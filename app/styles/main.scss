@@ -1,0 +1,53 @@
+// bower:scss
+// endbower
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.pattern-box{
+  position: relative;
+  .line{
+    transform-origin: left;
+    position: absolute;
+    height: 1px;
+    background-color: #FFF;
+    }
+}
+
+ul{
+  display: inline-block;
+  list-style-type: none;
+  background: #CCC;
+  margin: 0;
+  padding: 0;
+  &.success{
+    background: green;
+  }
+  &.error{
+    background: red;
+  }
+  li{
+    padding: 1rem;
+    float: left;
+    margin: 1rem;
+    &:nth-child(3n+1){
+      clear: both
+    }
+    &:before{
+      content: "";
+      border-radius: 100px;
+      background-color: #000;
+      width: 10px;
+      height: 10px;
+      display: block;
+      
+    }
+  }
+  li.selected:before{
+      background: #FFF;
+  }
+}
