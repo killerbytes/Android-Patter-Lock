@@ -83,7 +83,7 @@ PatternLock.prototype = {
         }
 
         this.get = ()=>{
-            return this.pattern.join("");
+            return this.pattern.join('');
         }
 
         this.bindEvents = ()=>{
